@@ -4,7 +4,7 @@ import os
 
 class KhronosOpenCLCLHPPConan(ConanFile):
     name = "khronos-opencl-clhpp"
-    version = "20190412"
+    version = "20191105"
     description = "OpenCL Host API C++ bindings"
     topics = ("conan", "opencl", "header-only", "opencl-headers", "clhpp", "khronos")
     url = "https://github.com/bincrafters/conan-khronos-opencl-clhpp"
@@ -16,13 +16,13 @@ class KhronosOpenCLCLHPPConan(ConanFile):
     no_copy_source = True
     _source_subfolder = "source_subfolder"
     requires = (
-        "khronos-opencl-headers/20190412@bincrafters/stable",
-        "khronos-opencl-icd-loader/20190412@bincrafters/stable"
+        "khronos-opencl-headers/20190806@bincrafters/stable",
+        "khronos-opencl-icd-loader/20191007@bincrafters/stable"
     )
 
     def source(self):
-        commit = "97a643f3bcb583fcbfb2a616d9b52790389514bc"
-        sha256 = "46157b36bed68e661cc73d4794829b0a06005ca9dda512dc7e30a376bee33557"
+        commit = "cf9fc1035e8298c7ce65ee33066a660fd9892ebb"
+        sha256 = "6b61e3958ed0b3b6bd4a8085946baf35987ced817f0d1b7b36b449cc57c0071e"
         tools.get("{0}/archive/{1}.tar.gz".format(self.homepage, commit), sha256=sha256)
         extracted_dir = "OpenCL-CLHPP-" + commit
         os.rename(extracted_dir, self._source_subfolder)
