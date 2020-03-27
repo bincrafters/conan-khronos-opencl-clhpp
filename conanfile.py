@@ -10,7 +10,6 @@ class KhronosOpenCLCLHPPConan(ConanFile):
     url = "https://github.com/bincrafters/conan-khronos-opencl-clhpp"
     homepage = "https://github.com/KhronosGroup/OpenCL-CLHPP"
     license = "MIT"
-    exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt"]
     generators = "cmake"
     no_copy_source = True
