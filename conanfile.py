@@ -16,7 +16,7 @@ class KhronosOpenCLCLHPPConan(ConanFile):
     _source_subfolder = "source_subfolder"
     requires = (
         "opencl-headers/2020.03.13",
-        "khronos-opencl-icd-loader/20191007@bincrafters/stable"
+        "opencl-icd-loader/2020.06.16"
     )
 
     def source(self):
